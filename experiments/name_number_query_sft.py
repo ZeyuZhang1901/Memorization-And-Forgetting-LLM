@@ -197,11 +197,9 @@ def evaluate_model(model: AutoModelForCausalLM,
         if predicted_number == true_number:
             correct += 1
             
-        # add some logging and debug print statements
         logger.debug(f"Question: {question}, True Number: {true_number}, Predicted Number: {predicted_number}")
         logger.debug(f"Output Text: {output_text}")
         logger.debug(f"Numbers: {numbers}")
-        logger.debug(f"Predicted Number: {predicted_number}")
         logger.debug("-" * 50)
     
     accuracy = correct / len(eval_questions)
